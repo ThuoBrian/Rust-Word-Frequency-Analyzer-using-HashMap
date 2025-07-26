@@ -8,7 +8,7 @@ fn main() {
     let message = match read_file_to_string("input.txt") {
         Ok(contents) => {
             println!(
-                "✅ File opened successfully.\n\n📄 File Contents:\n\n{}",
+                "\nFile opened successfully.\n\n 📄 File Contents:\n{}",
                 contents
             );
             contents
@@ -25,8 +25,13 @@ fn main() {
         }
     }
 
-    println!("Word counts:");
+    println!("\n Word counts:");
     for (word, count) in &count {
         println!("{:?}: {:?}", word, count);
     }
+    println!("\nTotal words: {}", count.len());
+    println!("\nWord frequency analysis completed successfully.\n");
 }
+
+// Todo:
+//Implement User Input via Command Line Arguments (std::env::args)

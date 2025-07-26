@@ -5,6 +5,13 @@ use std::process;
 fn main() {
     let mut count = HashMap::new();
 
+    // To-do:
+    // Implement User Input via Command Line Arguments (std::env::args)
+    // For now, we will read from a file named "input.txt"
+    // Ensure that the file exists in the current directory
+    // and contains some text for analysis.
+    println!("\nStarting word frequency analysis...\n");
+
     let message = match read_file_to_string("input.txt") {
         Ok(contents) => {
             println!(

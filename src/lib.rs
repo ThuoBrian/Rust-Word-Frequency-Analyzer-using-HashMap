@@ -25,9 +25,5 @@ pub fn clean_word(word: &str) -> Option<String> {
         .trim_matches(|c: char| !c.is_alphanumeric())
         .to_lowercase();
 
-    if cleaned.is_empty() {
-        None
-    } else {
-        Some(cleaned)
-    }
+    (!cleaned.is_empty()).then_some(cleaned)
 }

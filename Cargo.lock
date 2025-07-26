@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "Rust-Word-Frequency-Analyzer-using-HashMap"
+name = "rust_word_frequency_analyzer_using_hash_map"
 version = "0.1.0"

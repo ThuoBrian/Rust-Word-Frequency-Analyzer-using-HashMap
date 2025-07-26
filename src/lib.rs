@@ -18,3 +18,16 @@ pub fn read_file_to_string(file_path: &str) -> io::Result<String> {
     f.read_to_string(&mut contents)?;
     Ok(contents)
 }
+
+/// Cleans a word by trimming non-alphanumeric characters and converting it to lowercase.
+pub fn clean_word(word: &str) -> Option<String> {
+    let cleaned = word
+        .trim_matches(|c: char| !c.is_alphanumeric())
+        .to_lowercase();
+
+    if cleaned.is_empty() {
+        None
+    } else {
+        Some(cleaned)
+    }
+}

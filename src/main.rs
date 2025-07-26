@@ -1,4 +1,4 @@
-use Rust_Word_Frequency_Analyzer_using_HashMap::*;
+use rust_word_frequency_analyzer_using_hash_map::*;
 use std::collections::HashMap;
 use std::process;
 
